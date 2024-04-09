@@ -42,11 +42,25 @@ public class Humain {
 	
 	public void acheter(String bien, int prix) {
 		if (prix > argent) {
-			parler("Je n'ai plus que " + argent + " sous en poche. je ne peux même pas m'offrir un(e) " + bien + " à " + prix + " sous.");
+			parler("Je n'ai plus que " + argent + " sous en poche. je ne peux mï¿½me pas m'offrir un(e) " + bien + " ï¿½ " + prix + " sous.");
 		} else {
-			parler("J'ai " + argent + " sous en poche. Je vais pouvoir m'offrir un(e) " + bien + " à " + prix + " sous.");
+			parler("J'ai " + argent + " sous en poche. Je vais pouvoir m'offrir un(e) " + bien + " ï¿½ " + prix + " sous.");
 			perdreArgent(prix);
 		}
+	}
 	
+	public void faireConnaissanceAvec(Humain autreHumain) {
+		direBonjour();
+		autreHumain.repondre(this);
+		memoriser(autreHumain);
+	}
+	
+	public void repondre(Humain autreHumain) {
+		direBonjour();
+		memoriser(autreHumain);
+	}
+	
+	public void memoriser(Humain autreHumain) {
+		
 	}
 }
