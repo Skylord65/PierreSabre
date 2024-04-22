@@ -84,7 +84,7 @@ public class Humain {
 			for (int i = 0; i<nbConnaissance-1; i++) {
 				text += memoire[i].getNom() + ", ";
 			}
-			System.out.println("Je connais beaucoup de monde dont : " + text + memoire[nbConnaissance-1].getNom());
+			parler("Je connais beaucoup de monde dont : " + text + memoire[nbConnaissance-1].getNom());
 		}
 	}
 }
